@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Template Title</title>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-  <div>
-    
+  <div class="container">
+    <h1>Currency Exchanger</h1>
+    <form id="currencyExchangerForm">
+      <div class="form-group">
+        <label for="currencyToExchangeFrom">Currency to exchange from</label>
+        <select id="currencyToExchangeFrom">
+          <option value="USD">USD = US Dollar</option>
+          <option value="MXN">MXN = Mexican Peso</option>
+          <option value="CAD">CAD = Canadian Dollar</option>
+          <option value="JPY">JPY = Japanese Yen</option>
+          <option value="NOK">NOK = Norwegian Krone</option>
+          <option value="EUR">EUR = Euro</option>
+        </select>
+
+        <label for="currencyToExchangeTo">Currency to exchange to</label>
+        <select id="currencyToExchangeTo">
+          <option value="USD">USD = US Dollar</option>
+          <option value="MXN">MXN = Mexican Peso</option>
+          <option value="CAD">CAD = Canadian Dollar</option>
+          <option value="JPY">JPY = Japanese Yen</option>
+          <option value="NOK">NOK = Norwegian Krone</option>
+          <option value="EUR">EUR = Euro</option>
+        </select>
+
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+
+    <div id="output">
+      
+    </div>
   </div>
 </body>
 </html>
