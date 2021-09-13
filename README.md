@@ -4,6 +4,8 @@
 
 #### _**By Diego Serafico**_
 
+**https://diegoserafico.github.io/currency-exchanger/**
+
 ## Technologies Used
 
 * _HTML_
@@ -19,14 +21,15 @@ _In this page you enter an amount of money, a currency to convert from and a cur
 
 * _Clone this repository_
 * _Navigate to the root directory of the repository_
-* _type npm install into the terminal (make sure youre in the root directory)_
+* _Type npm install into the terminal (make sure youre in the root directory)_
+* _Aquire a key from **https://www.exchangerate-api.com/**_
+* _Create a .env file in the root directory and type "API_KEY=" plus your key_
 * _type npm start_
 * _input amount and currencies_
 
 ## Known Bugs
 
-* _Does not get the key from .env file._
-* _Doesn't error handle_
+* _Cannot run some tests because jest doesn't support fetch_
 
 ## License
 
