@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack'); 
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -10,13 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-source-map',
-  devServer: {
-    contentBase: './dist'
+  devServer: {               
+    contentBase: './dist'    
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'template',
+      title: 'Currency Exchanger',
       template: './src/index.html',
       inject: 'body'
     }),
@@ -35,11 +35,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
-      },
-      {
-        type: 'javascript/auto',
-        test: /\.mjs$/,
-        use: []
       }
     ]
   }
