@@ -1,18 +1,18 @@
-const fetch = require('node-fetch');
+//--fixconst fetch = require('node-fetch');
 
 export default class CurrencyExchanger {
   static getCurrencyJSON(currency) {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY
-  }/latest/${currency}`)
-    .then(function(response) {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
-    .catch(function(error) {
-      throw error;
-    })
+    }/latest/${currency}`)
+      .then(function(response) {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .catch(function(error) {
+        throw Error(error);
+      });
   }
  
   static convertCurrency(amount, exchangeRate) {

@@ -25,7 +25,6 @@ _In this page you enter an amount of money, a currency to convert from and a cur
 
 ## Known Bugs
 
-* _Refreshes site when submit is pressed_
 * _Does not get the key from .env file._
 * _Doesn't error handle_
 
