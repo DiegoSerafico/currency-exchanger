@@ -21,7 +21,7 @@ _In this page you enter an amount of money, a currency to convert from and a cur
 * _Navigate to the root directory of the repository_
 * _type npm install into the terminal (make sure youre in the root directory)_
 * _type npm start_
-* _input age_
+* _input amount and currencies_
 
 ## Known Bugs
 
