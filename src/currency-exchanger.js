@@ -1,5 +1,3 @@
-//--fixconst fetch = require('node-fetch');
-
 export default class CurrencyExchanger {
   static getCurrencyJSON(currency) {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY
@@ -24,6 +22,9 @@ export default class CurrencyExchanger {
       CurrencyExchanger.getCurrencyJSON(initialCurrency)
         .then(function(json) {
           let exchangeRate = json.conversion_rates[resultCurrency];
+          if (!exchangeRate) {
+            throw Error("The currency you selected is not supported");
+          }
           let result = CurrencyExchanger.convertCurrency(initialAmount, exchangeRate);
           resolve(result);
         })
