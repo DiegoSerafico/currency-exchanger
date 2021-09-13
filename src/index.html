@@ -9,7 +9,7 @@
     <form id="currencyExchangerForm">
       <div class="form-group">
         <label for="amountToExchange">Amount</label>
-        <input type="number" id="amountToExchange">
+        <input type="number" id="amountToExchange" min="0" value="1">
         <label for="currencyToExchangeFrom">Currency to exchange from</label>
         <select id="currencyToExchangeFrom">
           <option value="USD">USD = US Dollar</option>
@@ -28,6 +28,7 @@
           <option value="JPY">JPY = Japanese Yen</option>
           <option value="NOK">NOK = Norwegian Krone</option>
           <option value="EUR">EUR = Euro</option>
+          <option value="invalid">invalid</option>
         </select>
       </div>
       <button type="button" class="btn">Submit</button>
