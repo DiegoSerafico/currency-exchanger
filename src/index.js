@@ -6,16 +6,19 @@ import CurrencyExchanger from './currency-exchanger';
 
 $(function() {
   $(".btn").on("click", function() {
+    $("#output").empty();
     const amount = $('#amountToExchange').val();
     const currencyToExchangeFrom = $('#currencyToExchangeFrom').val();
     const currencyToExchangeTo = $('#currencyToExchangeTo').val();
-    console.log("Amount: " + amount + " from " + currencyToExchangeFrom + " to " + currencyToExchangeTo);
     CurrencyExchanger.exchange(currencyToExchangeFrom, currencyToExchangeTo, amount)
       .then(result => {
-        console.log(result);
+        $("#output").append(`<p>Amount: ${amount}</p>
+        <p>From: ${currencyToExchangeFrom}.</p>
+        <p>To: ${currencyToExchangeTo}.</p>
+        <p>Result: ${result}</p>`);
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   });
 });
